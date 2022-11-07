@@ -17,6 +17,8 @@ document.querySelector('#play').addEventListener('click', function(){
 	// following two lines update the volume percentage shown ONLY WHEN play buttom is clicked again
 	var vol = document.getElementById('slider').value;
 	document.getElementById('volume').innerHTML = vol + '%';
+	video.volume =vol/100;
+	console.log(video.volume)
 })
 
 // Pauses the video when clicking the pause button
@@ -101,6 +103,8 @@ document.querySelector('#slider').addEventListener('click', function(){
 	// following two lines update the volume percentage shown ONLY WHEN play buttom is clicked again
 	var vol = document.getElementById('slider').value;
 	document.getElementById('volume').innerHTML = vol + '%';
+	video.volume =vol/100;
+	console.log(video.volume)
 })
 
 
