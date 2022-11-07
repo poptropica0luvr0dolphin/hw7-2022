@@ -95,7 +95,13 @@ document.querySelector("#orig").addEventListener('click', function(){
 	console.log(root)
 })
 
+// update volume slider
 
+document.querySelector('#slider').addEventListener('click', function(){
+	// following two lines update the volume percentage shown ONLY WHEN play buttom is clicked again
+	var vol = document.getElementById('slider').value;
+	document.getElementById('volume').innerHTML = vol + '%';
+})
 
 
 
