@@ -3,8 +3,10 @@ var video = document.getElementById('player1');
 function loading(){
 	console.log("Good job opening the window");
 	video.autoplay = false;
+	console.log("Video autoplay is set to: " + video.autoplay)
 	window.loop=false;
 	video.load();
+	console.log("Video loop is set to: " + window.loop)
 }
 
 window.addEventListener("load", loading())
@@ -59,11 +61,11 @@ document.querySelector('#mute').addEventListener('click', function(){
 	if(vid.muted === true){
 		vid.muted = false;
         document.getElementById("mute").innerHTML= "Mute";
-	
+		console.log("unmute")
     }else{
 		vid.muted = true;
         document.getElementById("mute").innerHTML= "Unmute";
-		
+		console.log("mute")
     }
 })
 
@@ -86,7 +88,7 @@ document.querySelector('#skip').addEventListener('click', function(){
 document.querySelector("#vintage").addEventListener('click', function(){
 	var root = document.querySelector( '#player1' ); // '0' to assign the first (and only `HTML` tag)
 	root.setAttribute( 'class', 'oldSchool' );
-	console.log(root)
+	//console.log(root)
 })
 
 // styled function original
@@ -94,7 +96,7 @@ document.querySelector("#vintage").addEventListener('click', function(){
 document.querySelector("#orig").addEventListener('click', function(){
 	var root = document.querySelector( '#player1' ); // '0' to assign the first (and only `HTML` tag)
 	root.setAttribute( 'class', 'video' );
-	console.log(root)
+	//console.log(root)
 })
 
 // update volume slider
